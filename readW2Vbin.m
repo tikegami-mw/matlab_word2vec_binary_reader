@@ -15,7 +15,7 @@ function emb = readW2Vbin(fileName)
 % The code DOES NOT provide features for checking size or format of the file. 
 %
 %
-% Copyright 2000 The MathWorks, Inc.
+% Copyright (c) 2000 The MathWorks, Inc.
 %
 %% Open the word2vec file and obtain header inforamtion
 %
