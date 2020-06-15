@@ -3,6 +3,12 @@
 
 Reads a pre-trained word2vec word embedding model in the binary format. Note that it shows a progress bar during reading the data.
 
+# Environment
+
+MATLAB R2019b
+
+Text Analytics Toolbox Required.
+
 
 # Syntax
 
