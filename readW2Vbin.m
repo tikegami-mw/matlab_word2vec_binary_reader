@@ -19,19 +19,18 @@ function emb = readW2Vbin(fileName)
 %
 %% Open the word2vec file and obtain header inforamtion
 %
-% Open the file, and read one line, which should contain the number of
-% words and number of the dimensions of the embedding vector separated by a
-% ' ' (white space). Use |split| function to separate them and put into the
-% variable |nWords| and |nDims|.
-% 
-space  = uint8(' ');  
-
-fid = fopen(fileName,'r');
-
-% The header section of the file consists of "number of words" and "vector
+% Open the file, and read the header section of the file.  
+% The header section consists of "number of words" and "vector
 % dimensions" separated by the white space, and delimited by newline.
 % (e.g., 3000000\s300\n)  The total number of bytes of this section will
 % never exceed 50.
+space  = uint8(' ');  
+
+fid = fopen(fileName,'r');
+if fid < 0
+  error('File not found\n'):
+end
+
 nHeader = 50;
 
 tmpHead = fread(fid,nHeader,'*uint8');
@@ -43,7 +42,6 @@ nDims  = str2double(char(tmpHead(idxSpc+1:idxNewline-1))');
 
 % Set the file position to the end of the header section.
 fseek(fid,idxNewline,'bof');
-
 
 %% Prepare arrays and some parameter
 %
