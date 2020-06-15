@@ -28,7 +28,7 @@ space  = uint8(' ');
 
 fid = fopen(fileName,'r');
 if fid < 0
-  error('File not found\n'):
+  error('File not found\n');
 end
 
 nHeader = 50;
