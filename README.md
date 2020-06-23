@@ -41,6 +41,6 @@ emb - Word embedding, returned as a `wordEmbedding` object.
 ## Note: 
 
 
-This function was tested with the "GoogleNews-vectors-negative300.bin" from the  word2vec web ([https://code.google.com/archive/p/word2vec/](https://code.google.com/archive/p/word2vec/)). It took about a minutes to read the 3.5GB file.
+This function was tested with the "GoogleNews-vectors-negative300.bin" from the  word2vec web ([https://code.google.com/archive/p/word2vec/](https://code.google.com/archive/p/word2vec/)). It took about a minute to read the 3.5GB file.
 
 
